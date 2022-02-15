@@ -1,0 +1,21 @@
+Załączyłem plik z bazą danych 'powertoolrental.sql', gotowy do importu, są w nim dodane produkty i użytkownicy.
+Aby go zaimportować, najpierw trzeba stworzyć bazę danych o nazwie 'powertoolrental', po wejściu w nią, w zakładce import, wskazujemy wyżej wymieniony plik.
+
+Dane logowania użytkowników dwóch stworzonych użytkowników:
+login: admin, hasło: admin
+login: user, hasło: user
+
+Konto admin zapewnia dodatkowe możliwości, takie jak:
+-dodawanie produktu
+-edycja dowolnego produktu
+-dodawanie użytkownika
+
+Strona umożliwia:
+-logowanie i rejestracje
+-wypożyczenie produktu na określony czas (min 1 dzień - max 14 dni)
+-wypożyczenie drugi raz tego samego produktu z listy produktów, spowoduje dodanie do koszyka nowego produktu
+-usuwanie produktów z koszyka
+-składanie zamówienia, produkty z koszyka przenoszą się do zakładki 'zamówienia', a ich ilość w bazie danych zostaje zmniejszona
+-w koszyku oraz w szczegółach zamówienia, podana jest data do której produkt należy zwrócić
+-zmianę hasła, oraz danych użytkownika takich jak np. login czy imię
+

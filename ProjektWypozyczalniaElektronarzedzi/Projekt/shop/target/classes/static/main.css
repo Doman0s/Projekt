@@ -1,0 +1,109 @@
+.product {
+    border: 1px solid black;
+    margin: 10px;
+    width: 800px;
+    padding: 10px;
+    background-color: #595985;
+}
+
+.product .name {
+    font-size: 19px;
+    text-align: center;
+    width: 195px;
+}
+
+.product .id {
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    width: 25px;
+}
+
+.product .description {
+    font-size: 19px;
+    text-align: center;
+    width: 195px;
+}
+
+.product .price {
+    font-size: 19px;
+    text-align: center;
+    width: 120px;
+}
+
+.product .quantity {
+    font-size: 19px;
+    text-align: center;
+    width: 130px;
+}
+
+.product .edit {
+    font-size: 19px;
+    text-align: center;
+    width: 130px;
+}
+
+.product div {
+    margin-bottom: 10px;
+}
+
+body {
+    background-color: #4c4c6e;
+}
+
+.toCart {
+    height: 20px;
+    width: 70px;
+    text-decoration: none;
+    color: black;
+    padding: 3px 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    background: #624770;
+    display: inline-block;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.edit {
+    height: 20px;
+    width: 70px;
+    text-decoration: none;
+    color: black;
+    padding: 3px 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    background: darkred;
+    display: inline-block;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 10px;
+}
+
+.edit2 {
+    height: 20px;
+    width: 70px;
+    text-decoration: none;
+    color: black;
+    padding: 3px 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    background: darkred;
+    display: inline-block;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 50px;
+}
+
+.toCart:hover {
+    background: #7144a6;
+}
+
+.edit2:hover {
+    background: red;
+}
+
+.tableProducts tr{
+    display: flex;
+    width: 800px;
+}

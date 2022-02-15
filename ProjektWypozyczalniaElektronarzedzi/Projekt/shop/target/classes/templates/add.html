@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Wypozyczalnia elektronarzedzi</title>
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="add.css">
+  <script src="/validator.js"></script>
+</head>
+<body>
+
+<div th:replace="fragments.html :: logo"></div>
+<div th:replace="fragments.html :: header"></div>
+<div th:replace="fragments.html :: line"></div>
+<div th:replace="fragments.html :: menu"></div>
+<div th:replace="fragments.html :: line2"></div>
+<div th:replace="fragments.html :: userLogin"></div>
+
+<div id="content">
+  <div id="mainText"><h1> Dodawanie produktu </h1></div>
+  <form method="post" id="addProduct-form" onsubmit="return validate2()">
+    <input type="text" placeholder="Nazwa" th:field="*{product.name}" id="name">
+    <br>
+    <input type="text" placeholder="Model" th:field="*{product.description}" id="description">
+    <br>
+    Cena:
+    <input type="number" step="0.01" min="1" max="9999" th:field="*{product.price}" id="price">
+    <br>
+    Ilosc:
+    <input type="number" min="1" max="999" step="1" th:field="*{product.quantity}" id="quantity">
+    <br>
+    <input type="submit" value="Dodaj">
+  </form>
+</div>
+</body>
+</html>

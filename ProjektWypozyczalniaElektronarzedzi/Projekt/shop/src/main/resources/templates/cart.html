@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Wypozyczalnia elektronarzedzi</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+<div th:replace="fragments.html :: logo"></div>
+<div th:replace="fragments.html :: header"></div>
+<div th:replace="fragments.html :: line"></div>
+<div th:replace="fragments.html :: menu"></div>
+<div th:replace="fragments.html :: line2"></div>
+<div th:replace="fragments.html :: userLogin"></div>
+
+<div id="content">
+    <div id="mainText"><h1> Koszyk </h1></div>
+    <div class="order-position">
+        <table class="cartProducts">
+            <tr>
+                <th><div class="name">Typ</div></th>
+                <th><div class="description">Nazwa</div></th>
+                <th><div class="days">Okres wypozyczenia (dni)</div></th>
+                <th><div class="return">Data zwrotu produktu</div></th>
+                <th><div class="piece-price">Cena/doba</div></th>
+                <th><div class="price">Cena koncowa</div></th>
+                <th><div class="cartDelete">Usun</div></th>
+            </tr>
+        </table>
+    </div>
+
+    <div th:each="position : ${cart.orderPositions}" class="order-position">
+        <table class="cartProducts">
+            <tr>
+                <th><div th:text="${position.product.name}" class="name"></div></th>
+                <th><div th:text="${position.product.description}" class="description"></div></th>
+                <th><div th:text="${position.days}" class="days"></div></th>
+                <th><div th:text="${position.dateOfReturn}" class="return"></div></th>
+                <th><div th:text="${position.product.price + 'zl'}" class="piece-price"></div></th>
+                <th><div th:text="${#numbers.formatDecimal(position.product.price * position.days, 0, 2)} + 'zl'" class="price"></div></th>
+                <th><a th:if="${logged == true}" th:href="@{/cart/delete/{id}(id=${position.cartId})}" id="cartDelete">X</a></th>
+            </tr>
+        </table>
+    </div>
+
+    <div class="order-position">
+        <table class="cartProducts">
+            <tr>
+                <th><div class="name"></div></th>
+                <th><div class="description"></div></th>
+                <th><div class="days"></div></th>
+                <th><div class="return"></div></th>
+                <th><div class="price-price"></div></th>
+                <th>Razem:<div th:text="${result + 'zl'}" class="price"></div></th>
+                <th><div class="cartDelete"></div></th>
+            </tr>
+        </table>
+    </div>
+    <a href="/order" id="buttonOrder">Zamow</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+#addProduct-form {
+    width: 700px;
+    margin: 30px auto;
+    display: block;
+    text-align: center;
+    font-size: 26px;
+}
+
+#addProduct-form input[type="text"] {
+    width: 80%;
+    margin: 5px 0;
+    font-size: 26px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#addProduct-form input[type="text"]:hover {
+    border: 2px solid #7144a6;
+    border-radius: 10px;
+}
+
+#addProduct-form input[type="number"] {
+    width: 70%;
+    margin: 5px 0;
+    font-size: 26px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#addProduct-form input[type="number"]:hover {
+    border: 2px solid #7144a6;
+    border-radius: 10px;
+}
+
+#addProduct-form input[type="submit"] {
+    background: white;
+    border: 1px solid black;
+    margin: 10px 0;
+    border-radius: 10px;
+    font-size: 26px;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: border, color 0.5s;
+    transition: background 0.5s;
+}
+
+#addProduct-form input[type="submit"]:hover {
+    background: #277d23;
+    border: 1px solid #277d23;
+    color: white;
+}
+
+body {
+    background-color: #4c4c6e;
+}

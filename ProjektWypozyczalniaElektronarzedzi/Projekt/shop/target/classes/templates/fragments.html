@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Wypozyczalnia elektronarzedzi</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <div id="logo" th:fragment="logo">
+        <img src="pictures/logo.png">
+    </div>
+
+    <div id="header" th:fragment="header">
+        <h1> Wypozyczak </h1>
+    </div>
+
+    <div id="line" th:fragment="line">
+        <div id="bline"> </div>
+    </div>
+
+    <div id="menu" th:fragment="menu">
+        <a href="/main">Strona Glowna</a>
+        <a href="/contact">Kontakt</a>
+        <a th:if="${logged == true}" href="/cart">Koszyk</a>
+        <a th:if="${logged == true}" href="/orders">Zamowienia</a>
+        <a th:if="${logged == true}" href="/modifyUser">Edycja Danych</a>
+        <a th:if="${logged == true}" href="/changePassword">Zmiana Zasla</a>
+        <a th:if="${logged == false}" href="/login">Zaloguj</a>
+        <a th:if="${logged == true}" href="/logout">Wyloguj</a>
+    </div>
+
+    <div id="menu2" th:fragment="menu">
+        <a th:if="${logged == true and whoIsLogged == 'admin'}" href="/add">Dodaj Produkt</a>
+        <a th:if="${logged == true and whoIsLogged == 'admin'}" href="/addUser">Dodaj Uzytkownika</a>
+    </div>
+
+    <div id="line2" th:fragment="line2">
+        <div id="bline2"> </div>
+    </div>
+
+    <div id="userLogin" th:if="${logged == true}" th:fragment="userLogin">
+        Zalogowano jako:
+        <b><div id="admin" th:if="${whoIsLogged == 'admin'}" th:text="${user}"></div>
+            <div th:if="${whoIsLogged != 'admin'}" th:text="${user}"></div></b>
+    </div>
+</body>
+</html>

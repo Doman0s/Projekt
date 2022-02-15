@@ -1,0 +1,67 @@
+.order-position {
+    width: 1100px;
+    border: 1px solid black;
+    margin: 2px 0;
+    background-color: #595985;
+}
+
+.order-position .name {
+    width: 160px;
+    display: inline-block;
+}
+
+.order-position .description {
+    width: 160px;
+    display: inline-block;
+}
+
+.order-position .days {
+    width: 120px;
+    display: inline-block;
+}
+
+.order-position .piece-price {
+    width: 100px;
+    display: inline-block;
+}
+
+.order-position .price {
+    width: 150px;
+    display: inline-block;
+}
+
+.order-position .return {
+    width: 270px;
+    display: inline-block;
+}
+
+.order-position .cartDelete {
+    width: 100px
+    padding-left: 50px;
+    display: inline-block;
+}
+
+#cartDelete {
+    color: #8b0000;
+}
+
+body {
+    background-color: #4c4c6e;
+}
+
+#buttonOrder {
+    margin: 15px 15px;
+    text-decoration: none;
+    color: black;
+    padding: 5px 15px;
+    font-size: 20px;
+    border-radius: 10px;
+    background: white;
+    transition: background, color 0.5s;
+    transition: background 0.5s;
+}
+
+#buttonOrder:hover {
+    background: #7144a6;
+    color: white;
+}
